@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thread_com/screens/profile.dart';
+import 'package:thread_com/features/profile/screens/profile.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});
@@ -17,6 +17,9 @@ class _SearchState extends State<Search> {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: Icon(Icons.arrow_back)),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           child: Text(
@@ -48,7 +51,8 @@ class _SearchState extends State<Search> {
                 padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 child: Row(
                   children: [
-                    CircleAvatar(radius: 24),
+                    CircleAvatar(radius: 24,
+                    backgroundImage: NetworkImage("https://www.vhv.rs/dpng/d/426-4263064_circle-avatar-png-picture-circle-avatar-image-png.png"),),
                     SizedBox(width: 12),
                     Expanded(
                       child: Column(
@@ -56,14 +60,14 @@ class _SearchState extends State<Search> {
                         children: [
                           Row(
                             children: [
-                              Text("threadsapp",
+                              Text("Jon Wick",
                                   style: TextStyle(fontWeight: FontWeight.bold)),
                               SizedBox(width: 5),
                               Icon(Icons.verified, color: Colors.blue, size: 16),
                             ],
                           ),
-                          Text("Threads", style: TextStyle(color: Colors.grey)),
-                          Text("35 followers", style: TextStyle(color: Colors.grey)),
+                          Text("Jon_W", style: TextStyle(color: Colors.grey)),
+                          Text("35K followers", style: TextStyle(color: Colors.grey)),
                         ],
                       ),
                     ),
@@ -73,13 +77,13 @@ class _SearchState extends State<Search> {
                       },
                       style: ElevatedButton.styleFrom(
                         elevation: 4,
-                        backgroundColor: Colors.white,
-                        side: BorderSide(color: Colors.grey.shade300),
+                        backgroundColor: Colors.red,
+                        side: BorderSide(color: Colors.red),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
                       ),
-                      child: Text("Follow", style: TextStyle(color: Colors.black)),
+                      child: Text("Follow", style: TextStyle(color: Colors.white)),
                     ),
                   ],
                 ),
@@ -89,7 +93,8 @@ class _SearchState extends State<Search> {
                 padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 child: Row(
                   children: [
-                    CircleAvatar(radius: 24),
+                    CircleAvatar(radius: 24,
+                    backgroundImage: NetworkImage("https://fapl.ru/upload/2022/06/salah-pfa520.jpg"),),
                     SizedBox(width: 12),
                     Expanded(
                       child: Column(
@@ -97,13 +102,13 @@ class _SearchState extends State<Search> {
                         children: [
                           Row(
                             children: [
-                              Text("ankurwarikoo",
+                              Text("M.Salah",
                                   style: TextStyle(fontWeight: FontWeight.bold)),
                               SizedBox(width: 5),
                               Icon(Icons.verified, color: Colors.blue, size: 16),
                             ],
                           ),
-                          Text("Ankur Warikoo", style: TextStyle(color: Colors.grey)),
+                          Text("M.Salah", style: TextStyle(color: Colors.grey)),
                           Text("916k followers", style: TextStyle(color: Colors.grey)),
                         ],
                       ),
@@ -114,13 +119,13 @@ class _SearchState extends State<Search> {
                       },
                       style: ElevatedButton.styleFrom(
                         elevation: 4,
-                        backgroundColor: Colors.white,
-                        side: BorderSide(color: Colors.grey.shade300),
+                        backgroundColor: Colors.red,
+                        side: BorderSide(color: Colors.red),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
                       ),
-                      child: Text("Follow", style: TextStyle(color: Colors.black)),
+                      child: Text("Follow", style: TextStyle(color: Colors.white)),
                     ),
                   ],
                 ),
@@ -130,7 +135,7 @@ class _SearchState extends State<Search> {
                 padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 child: Row(
                   children: [
-                    CircleAvatar(radius: 24),
+                    CircleAvatar(radius: 24,backgroundImage: NetworkImage("https://static.vecteezy.com/system/resources/previews/004/477/337/non_2x/face-young-man-in-frame-circular-avatar-character-icon-free-vector.jpg"),),
                     SizedBox(width: 12),
                     Expanded(
                       child: Column(
@@ -138,13 +143,13 @@ class _SearchState extends State<Search> {
                         children: [
                           Row(
                             children: [
-                              Text("Facebook",
+                              Text("zuck",
                                   style: TextStyle(fontWeight: FontWeight.bold)),
                               SizedBox(width: 5),
                               Icon(Icons.verified, color: Colors.blue, size: 16),
                             ],
                           ),
-                          Text("Facebook", style: TextStyle(color: Colors.grey)),
+                          Text("zuck", style: TextStyle(color: Colors.grey)),
                           Text("242k followers", style: TextStyle(color: Colors.grey)),
                         ],
                       ),
@@ -155,13 +160,13 @@ class _SearchState extends State<Search> {
                       },
                       style: ElevatedButton.styleFrom(
                         elevation: 4,
-                        backgroundColor: Colors.white,
-                        side: BorderSide(color: Colors.grey.shade300),
+                        backgroundColor: Colors.red,
+                        side: BorderSide(color: Colors.red),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
                       ),
-                      child: Text("Follow", style: TextStyle(color: Colors.black)),
+                      child: Text("Follow", style: TextStyle(color: Colors.white)),
                     ),
                   ],
                 ),

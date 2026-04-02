@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thread_com/screens/auth.dart';
+import 'package:thread_com/features/auth/screens/auth.dart';
 
 class Fir extends StatefulWidget {
   const Fir({super.key});
@@ -32,7 +32,7 @@ class _FirState extends State<Fir> {
         padding: EdgeInsets.all(16),
         child: InkWell(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Auth()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>AuthScreen()));
           },
           borderRadius: BorderRadius.circular(15),
           child: Container(
@@ -49,7 +49,7 @@ class _FirState extends State<Fir> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Log in with Instagram",
+                      "Log in with Google",
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.grey,
@@ -77,3 +77,4 @@ class _FirState extends State<Fir> {
 );
   }
 }
+

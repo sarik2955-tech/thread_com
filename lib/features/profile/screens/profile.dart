@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:thread_com/features/auth/screens/auth.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -33,7 +34,6 @@ class _ProfileState extends State<Profile> {
             ],
           ),
         ),
-
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
           child: Row(
@@ -44,7 +44,7 @@ class _ProfileState extends State<Profile> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Krunal Modi",
+                      "Sardor Subhanov",
                       style: TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
@@ -55,7 +55,7 @@ class _ProfileState extends State<Profile> {
                     Row(
                       children: [
                         Text(
-                          "Kmodi24",
+                          "Sardor_S",
                           style: TextStyle(fontSize: 16),
                         ),
                         SizedBox(width: 10),
@@ -67,7 +67,7 @@ class _ProfileState extends State<Profile> {
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Text(
-                            "threads.net",
+                            "threads.net", 
                             style: TextStyle(fontSize: 12),
                           ),
                         ),
@@ -88,7 +88,7 @@ class _ProfileState extends State<Profile> {
                         CircleAvatar(radius: 10),
                         SizedBox(width: 6),
                         Text(
-                          "26 followers",
+                          "26K followers",
                           style: TextStyle(color: Colors.grey),
                         ),
                       ],
@@ -99,6 +99,7 @@ class _ProfileState extends State<Profile> {
 
               CircleAvatar(
                 radius: 40,
+                backgroundImage:NetworkImage("https://static.vecteezy.com/system/resources/previews/004/477/343/non_2x/face-young-man-in-frame-circular-avatar-character-icon-free-vector.jpg"),
               ),
             ],
           ),
@@ -115,16 +116,16 @@ class _ProfileState extends State<Profile> {
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     elevation: 4,
-                    backgroundColor: Colors.white,
-                    side: BorderSide(color: Colors.grey.shade300),
+                    backgroundColor: Colors.red,
+                    side: BorderSide(color: Colors.red),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                     padding: EdgeInsets.symmetric(vertical: 14),
                   ),
                   child: Text(
-                    "Edit profile",
-                    style: TextStyle(color: Colors.black),
+                    "Follow",
+                    style: TextStyle(color: Colors.white),
                   ),
                 ),
               ),
@@ -150,7 +151,30 @@ class _ProfileState extends State<Profile> {
             ],
           ),
         ),
-
+        Spacer(),
+           Padding(
+             padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+             child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>AuthScreen()));
+                    },
+                    style: ElevatedButton.styleFrom(
+                      elevation: 10,
+                      backgroundColor: Colors.red,
+                      side: BorderSide(color: Colors.red),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      padding: EdgeInsets.symmetric(vertical: 14),
+                    ),
+                    child: Text(
+                      "Log Out",
+                      style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold, fontSize: 12),
+                      
+                    ),
+           ),   
+           ), 
+           SizedBox(height: 20,)
       ],
     ),
   ),
